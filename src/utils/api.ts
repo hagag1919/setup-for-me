@@ -11,7 +11,8 @@ import type {
   WingetSearchResult,
 } from '../types';
 
-const API_BASE_URL = '/api';
+
+const API_BASE_URL = (import.meta as any)?.env?.VITE_API_BASE || '/api';
 
 // Create axios instance
 const api = axios.create({
